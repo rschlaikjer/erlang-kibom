@@ -1,0 +1,18 @@
+[
+{kibom, [
+    {digikey, [
+        {api_base, <<"https://sandbox-api.digikey.com/">>}
+    ]},
+    {oauth, [
+        {id, <<"">>},
+        {secret, <<"">>},
+        {redirect, <<"http://localhost:8021/oauth">>}
+    ]},
+    {database, [
+        {username, ""},
+        {password, ""},
+        {host, ""},
+        {database, ""}
+    ]}
+]}
+].
