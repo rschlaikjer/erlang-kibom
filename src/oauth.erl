@@ -1,6 +1,5 @@
 -module(oauth).
 -compile(export_all).
--define(ACCESS_TOKEN, <<"JdlzWKK8jtWrPIHwoUYjF032dKsg">>).
 -include_lib("kibom/include/records.hrl").
 
 -record(oauth_config, {id, secret, redirect}).
