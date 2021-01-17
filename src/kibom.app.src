@@ -1,16 +1,15 @@
 {application, kibom,
- [{description, "An OTP application"},
+ [{description, "Digikey Quote Manager"},
   {vsn, "0.1.0"},
   {registered, []},
-  {mod, { kibom_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    jsx,
+    lager,
+    elli,
+    pgapp
    ]},
-  {env,[]},
-  {modules, []},
-
-  {maintainers, []},
-  {licenses, []},
-  {links, []}
+  {mod, { kibom_app, []}},
+  {env,[]}
  ]}.

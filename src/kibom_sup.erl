@@ -28,7 +28,16 @@ start_link() ->
 
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
 init([]) ->
-    {ok, { {one_for_all, 0, 1}, []} }.
+    ElliOpts = [{callback, http_cb}, {port, 8021}],
+    ElliSpec = #{
+        id => elli_http,
+        start => {elli, start_link, [ElliOpts]},
+        restart => permanent,
+        shutdown => 5000,
+        type => worker,
+        modules => [elli]
+    },
+    {ok, { {one_for_one, 5, 10}, [ElliSpec]} }.
 
 %%====================================================================
 %% Internal functions

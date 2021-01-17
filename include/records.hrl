@@ -1,0 +1,3 @@
+-record(dkey_product, {}).
+-record(dkey_price, {quantity, unit, total}).
+-record(oauth_resp, {access_token, refresh_token, expires_at, refresh_expires_at}).

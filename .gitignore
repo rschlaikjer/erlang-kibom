@@ -13,3 +13,5 @@ erl_crash.dump
 .rebar
 logs
 _build
+files/app.config
+files/prod.config
